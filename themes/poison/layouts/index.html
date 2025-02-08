@@ -1,0 +1,22 @@
+{{ define "main" -}}
+<div class="posts">
+    {{ $frontPageTypes := default (slice "posts") .Site.Params.front_page_content }}
+    {{ range (.Paginate (where .Site.RegularPages "Type" "in" $frontPageTypes)).Pages }}
+    <article class="post">
+
+        {{ partial "post/info.html" . }}
+        <a href="{{ .RelPermalink }}">
+            {{ if or (.Site.Params.noSummary) (.Params.noSummary) }}
+            {{ .Content }}
+            {{ else }}
+            {{ .Summary }}
+            {{ if .Truncated }}
+        </a>
+        {{ end }}
+        {{ end }}
+    </article>
+    <hr>
+    {{- end }}
+</div>
+{{ partial "pagination.html" . }}
+{{- end }}

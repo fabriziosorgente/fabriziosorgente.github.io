@@ -1,0 +1,94 @@
+/* Empty css file that users can override in their own /assets/css/custom.css file */
+
+html {
+    font-family: "Monaco", monospace;
+    font-weight: 300;
+    font-size: 16px;
+
+}
+
+.entries li::after {
+    background-image: radial-gradient(circle, currentcolor 1px, transparent 1.5px);
+    background-position: bottom;
+    background-size: 1ex 3.5px;
+    background-repeat: space no-repeat;
+    content: "";
+    flex-grow: 1;
+    height: 1.1em;
+    order: 2;
+    max-width: 30%;
+}
+
+
+.main-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.sidebar-about h1 {
+    font-size: 30px;
+    font-family: "Monaco", monospace;
+}
+
+.lead {
+    font-size: 16px;
+    font-weight: 300;
+    color: red;
+}
+
+.content {
+    max-width: 100%;
+}
+
+
+.sidebar-nav {
+    font-size: 24px;
+}
+
+.sidebar-sticky {
+
+    margin-top: 2rem;
+}
+
+a.sidebar-nav-item:hover,
+a.sidebar-nav-item:focus {
+    text-decoration: none;
+}
+
+hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+.post {
+    margin-bottom: 2.2rem;
+    margin-top: 2rem;
+
+}
+
+.bullet {
+    margin-left: 1em;
+    text-decoration-line: none;
+    text-decoration-style: dotted;
+    text-decoration-thickness: 1%;
+}
+
+.social {
+    margin-right: 0.5em;
+    text-decoration: none !important;
+    color: var(--sidebar-socials-color) !important;
+}
+
+.div-social {
+
+    text-align: center;
+}
