@@ -1,12 +1,12 @@
 {{ define "main" -}}
 <h1 class="title">{{ .Title }}</h1>
-<ul class="entries">
+<ul class="entries" style="padding-left: 0px;">
     {{ range .Pages.GroupByDate "2006" }}
-    <h3 style="text-align: center;">{{ .Key }}</h3>
+    <h3 style="text-align: left;">{{ .Key }}</h3>
     {{ range .Pages }}
     <li class="main-list">
-        <span class="title">
-            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        <span class="title" style="text-indent:30px;">
+            <a href="{{ .RelPermalink }}">> {{ .Title }}</a>
         </span>
         <span class="published">
             <time class="pull-right post-list">{{ .Date | time.Format ":date_long" }}</time>

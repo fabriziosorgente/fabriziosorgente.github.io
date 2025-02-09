@@ -9,7 +9,7 @@ pluralizelisttitles = false   # removes the automatically appended "s" on sideba
 # disqusShortname = "yourDisqusShortname"
 
 [params]
-    hideToc = true
+    hideToc = false
     brand = "Fabrizio Sorgente"                      # name of your site - appears in the sidebar
     # remote_brand_image = 'https://github.com/USERNAME.png' # path to a remote file
     # brand_image = "/images/test.jpg"    # path to the image shown in the sidebar
