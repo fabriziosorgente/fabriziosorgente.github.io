@@ -1,112 +1,209 @@
-baseURL = 'https://fabrizio.sorgente.me'
-languageCode = 'en-us'
-title = 'Fabrizio Sorgente'
-theme = 'poison'
-pagination.pagerSize = 6
-pluralizelisttitles = false   # removes the automatically appended "s" on sidebar entries
+baseURL = "https://fabrizio.sorgente.me"
+title = "Fabrizio \"Nix\" Sorgente"
+theme = "hugo-coder"
+languageCode = "en-us"
+defaultContentLanguage = "en"
+enableEmoji = true
 
-# NOTE: If using Disqus as commenting engine, uncomment and configure this line
-# disqusShortname = "yourDisqusShortname"
+[pagination]
+pagerSize = 20
+
+[services]
+[services.disqus]
+# Enable Disqus comments
+# shortname = "yourdiscussshortname"
+
+[markup]
+[markup.highlight]
+noClasses = false
+
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
 
 [params]
-    hideToc = false
-    brand = "Fabrizio Sorgente"                      # name of your site - appears in the sidebar
-    # remote_brand_image = 'https://github.com/USERNAME.png' # path to a remote file
-    # brand_image = "/images/test.jpg"    # path to the image shown in the sidebar
-    description = "Offensive Security Specialist" # Used as default meta description if not specified in front matter
-    dark_mode = true                      # optional - defaults to false
-    # favicon = "favicon.png"             # path to favicon (defaults to favicon.png)
+favicon_32="/images/favicon-32.png"
+faviconSVG="/images/favicon-32.svg"
+author = "Fabrizio \"Nix\" Sorgente"
+# license = '<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA-4.0</a>'
+description = ""
+keywords = "blog,security,cybersecurity,offensive,redteam,personal"
+info = ["Offensive Security >< Red Team"]
+avatarURL = "images/Nix.png"
+#gravatar = "john.doe@example.com"
+dateFormat = "2 January 2006"
+since = 2025
+# Git Commit in Footer, uncomment the line below to enable it
+#commit = "https://github.com/luizdepra/hugo-coder/tree/"
+# Right To Left, shift content direction for languages such as Arabic
+rtl = false
+# Specify light/dark colorscheme
+# Supported values:
+# "auto" (use preference set by browser)
+# "dark" (dark background, light foreground)
+# "light" (light background, dark foreground) (default)
+colorScheme = "dark"
+# Hide the toggle button, along with the associated vertical divider
+hideColorSchemeToggle = true
+# Series see also post count
+maxSeeAlsoItems = 5
+# Custom CSS
+customCSS = ["css/custom.css"]
+# Custom SCSS, file path is relative to Hugo's asset folder (default: {your project root}/assets)
+customSCSS = []
 
-    front_page_content = ["blog"] # Equivalent to the default value, add page bundle names to include them on the front page.
+# Custom JS
+customJS = []
 
-    # MENU PLACEHOLDER
-    # Menu dict keys:
-        # Name = 
-        # URL:          The directory relative to the content directory.
-        # HasChildren:  If the directory's files should be listed.  Default is true.
-        # Limit:        If the files should be listed, how many should be shown.
-    menu = [
-        #{Name = "/about", URL = "/about/", HasChildren = false},
-        {Name = "/blog", URL = "/blog/", Pre = "Recent", HasChildren = false, Limit = 3},
-    ]
+# Custom remote JS files
+customRemoteJS = []
 
-    # Links to your socials.  Comment or delete any you don't need/use. 
-    linkedin_url = "https://www.linkedin.com/in/fabrizio-sorgente/"
+# If you want to use fathom(https://usefathom.com) for analytics, add this section
+# [params.fathomAnalytics]
+# siteID = "ABCDE"
+# serverURL = "analytics.example.com" # Default value is cdn.usefathom.com, overwrite this if you are self-hosting
 
-    # discord_url = "https://discord.com"
-    # email_url = "mailto://user@domain"
-    # facebook_url = "https://facebook.com"
-    # flickr_url = "https://flickr.com"
-    # github_url = "https://github.com"
-    # gitlab_url = "https://gitlab.com"
-    # instagram_url = "https://instagram.com"
-    # mastodon_url = "https://mastodon.social"
-    # matrix_url = "https://matrix.org"
-    # telegram_url = "https://telegram.org"
-    # tryhackme_url = "https://tryhackme.com"
-    # twitter_url = "https://twitter.com"
-    # x_url = "https://x.com"
-    # xmpp_url = "https://xmpp.org"
-    # youtube_url = "https://youtube.com"
-    # signal_url = "https://signal.org"
-    # bluesky_url = "https://bsky.app"
+# If you want to use plausible(https://plausible.io) for analytics, add this section
+# [params.plausibleAnalytics]
+# domain = "example.com"
+# serverURL = "analytics.example.com" # Default value is plausible.io, overwrite this if you are self-hosting or using a custom domain
+# outboundLinksTracking = true
+# fileDownloadsTracking = true
 
-    # NOTE: If you don't want to use RSS, comment or delete the following lines
-    # Adds an RSS icon to the end of the socials which links to {{ .Site.BaseURL }}/index.xml
-    rss_icon = false
-    # Which section the RSS icon links to, defaults to all content. See https://gohugo.io/templates/rss/#section-rss
-    rss_section = "posts"
+# If you want to use goatcounter(https://goatcounter.com) for analytics, add this section
+# [params.goatCounter]
+# code = "code"
 
-    # Hex colors for your sidebar.
-    moon_sun_background_color = "#515151"   # default is #515151
-    moon_sun_color = "#FFF"                 # default is #FFF
-    sidebar_a_color = "#FFF"                # default is #FFF
-    sidebar_bg_color = "#202020"            # default is #202020
-    sidebar_h1_color = "#FFF"               # default is #FFF
-    sidebar_img_border_color = "#515151"    # default is #515151
-    sidebar_p_color = "#909090"             # default is #909090
-    sidebar_socials_color = "#FFF"          # default is #FFF
+# If you want to use Cloudflare Web Analytics(https://cloudflare.com) for analytics, add this section
+# [params.cloudflare]
+# token = "token"
 
-    # Hex colors for your content in light mode.
-    code_color = "#000"                     # default is #000
-    code_background_color = "#E5E5E5"       # default is #E5E5E5
-    code_block_color = "#FFF"               # default is #FFF
-    code_block_background_color = "#272822" # default is #272822
-    content_bg_color = "#FAF9F6"            # default is #FAF9F6
-    date_color = "#515151"                  # default is #515151
-    link_color = "#303030"                  # default is #DBE2E9
-    list_color = "#5A5A5A"                  # default is #5A5A5A
-    post_title_color = "#303030"            # default is #303030
-    table_border_color = "#E5E5E5"          # default is #E5E5E5
-    table_stripe_color = "#F9F9F9"          # default is #F9F9F9
-    text_color = "#222"                     # default is #222
+# If you want to use Counter.dev(https://counter.dev) for analytics, add this section
+# [params.counterdev]
+# id = "data-id"
 
-    # Hex colors for your content in dark mode
-    code_color_dark = "#FFF"                        # default is #FFF
-    code_background_color_dark = "#515151"          # default is #515151
-    code_block_color_dark = "#FFF"                  # default is #FFF
-    code_block_background_color_dark = "#272822"    # default is #272822
-    content_bg_color_dark = "#121212"               # default is #121212
-    date_color_dark = "#9A9A9A"                     # default is #9A9A9A
-    link_color_dark = "#DBE2E9"                     # default is #DBE2E9
-    list_color_dark = "#9D9D9D"                     # default is #9D9D9D
-    post_title_color_dark = "#DBE2E9"               # default is #DBE2E9
-    table_border_color_dark = "#515151"             # default is #515151
-    table_stripe_color_dark = "#202020"             # default is #202020
-    text_color_dark = "#EEE"                        # default is #EEE
+# If you want to use Matomo(https://matomo.org) for analytics, add this section
+# [params.matomo]
+# siteID = "ABCDE" # Default value is "1", overwrite this if you are cloud-hosting
+# serverURL = "analytics.example.com" # For cloud-hosting, use provided URL, e.g. example.matomo.cloud
 
-    # NOTE: If using Remark42 as commenting engine, uncomment and configure these lines
-    # remark42 = true
-    # remark42_host = "https://yourhost.com"
-    # remark42_site_id = "your_site_id"
+# If you want to use Google Tag Manager(https://analytics.google.com/) for analytics, add this section
+# [params.googleTagManager]
+# id = "gid"
 
-    # NOTE: The following three params are optional and are used to create meta tags + enhance SEO.
-    # og_image = ""                       # path to social icon - front matter: image takes precedent, then og_image, then brand_url
-                                          # this is also used in the schema output as well. Image is resized to max 1200x630
-                                          # For this to work though og_image and brand_url must be a path inside the assets directory
-                                          # e.g. /assets/images/site/og-image.png becomes images/site/og-image.png
-    # publisher_icon = ""                 # path to publisher icon - defaults to favicon, used in schema
+# If you want to use Yandex Metrika(https://metrika.yandex.ru) for analytics, add this section
+# [params.yandexMetrika]
+# id = "gid"
+
+# If you want to use Application Insights(https://azure.com/) for analytics, add this section
+# [params.applicationInsights]
+# connectionString = "connectionString"
+
+# If you want to use microanalytics.io for analytics, add this section
+# [params.microAnalytics]
+# id = "ABCDE"
+# dnt = "false" # respect DNT tracker, "true" by default
+
+# If you want to use Pirsch(https://pirsch.io) for analytics, add this section
+# [params.pirsch]
+# code = "ABCDE"
+
+# If you want to use Umami(https://umami.is) for analytics, add this section
+# [params.umami]
+# siteID = "ABCDE"
+# scriptURL = "analytics.REGION.umami.is/SCRIPTNAME.js"
+
+# If you want to use One Dollars Stats(https://onedollarstats.com/analytics) for analytics, add this section
+# [params.onedollarstats]
+# id = "data-site-id"
+
+# If you want to implement a Content-Security-Policy, add this section
+# [params.csp]
+# childsrc = ["'self'"]
+# fontsrc = ["'self'", "https://fonts.gstatic.com", "https://cdn.jsdelivr.net/"]
+# formaction = ["'self'"]
+# framesrc = ["'self'", "https://www.youtube.com"]
+# imgsrc = ["'self'"]
+# objectsrc = ["'none'"]
+# stylesrc = [
+#   "'self'",
+#   "'unsafe-inline'",
+#   "https://fonts.googleapis.com/",
+#   "https://cdn.jsdelivr.net/",
+# ]
+# scriptsrc = [
+#   "'self'",
+#   "'unsafe-inline'",
+#   "https://www.google-analytics.com",
+#   "https://cdn.jsdelivr.net/",
+# ]
+# prefetchsrc = ["'self'"]
+# # connect-src directive – defines valid targets for to XMLHttpRequest (AJAX), WebSockets or EventSource
+# connectsrc = ["'self'", "https://www.google-analytics.com"]
 
 [taxonomies]
-    series = 'series'
-    tags = 'tags'
+category = "categories"
+series = "series"
+tag = "tags"
+author = "authors"
+
+[[params.social]]
+name = "Github"
+icon = "fa-brands fa-github fa-2x"
+weight = 1
+url = "https://github.com/fabriziosorgente"
+
+#[[params.social]]
+#name = "Gitlab"
+#icon = "fa-brands fa-gitlab fa-2x"
+#weight = 2
+#url = "https://gitlab.com/johndoe/"
+
+#[[params.social]]
+#name = "Twitter"
+#icon = "fa-brands fa-x-twitter fa-2x"
+#weight = 3
+#url = "https://twitter.com/johndoe/"
+
+[[params.social]]
+name = "LinkedIn"
+icon = "fa-brands fa-linkedin fa-2x"
+weight = 4
+url = "https://www.linkedin.com/in/fabrizio-sorgente/"
+
+#[[params.social]]
+#name = "Medium"
+#icon = "fa-brands fa-medium fa-2x"
+#weight = 5
+#url = "https://medium.com/@johndoe"
+
+#[[params.social]]
+#name = "RSS"
+#icon = "fa-solid fa-rss fa-2x"
+#weight = 6
+#url = "https://myhugosite.com/index.xml"
+#rel = "alternate"
+#type = "application/rss+xml"
+
+[languages.en]
+languageName = ":us:"
+
+[[languages.en.menu.main]]
+name = "whoami"
+weight = 1
+url = "whoami/"
+
+#[[languages.en.menu.main]]
+#name = "blog"
+#weight = 2
+#url = "posts/"
+
+#[[languages.en.menu.main]]
+#name = "projects"
+#weight = 3
+#url = "projects/"
+
+#[[languages.en.menu.main]]
+#name = "contact me"
+#weight = 5
+#url = "contact/"

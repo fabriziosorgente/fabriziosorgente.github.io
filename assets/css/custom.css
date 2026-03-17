@@ -1,0 +1,34 @@
+body {
+  font-size: 1.6em;
+  line-height: 2em;
+  -webkit-hyphens: none;
+  hyphens: none;
+}
+
+.content {
+
+  margin-top: 0rem;
+}
+
+.content article p {
+  -ms-hyphens: none;
+  -webkit-hyphens: none;
+  hyphens: none;
+  text-align: justify;
+}
+
+.container {
+
+  /*max-width: 100rem;*/
+}
+
+.content header {
+  margin-top: 0rem;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 1.8em;
+    line-height: 1.8em;
+  }
+}
