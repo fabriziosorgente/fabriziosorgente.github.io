@@ -8,7 +8,7 @@ author = ""
 
 <div style="background:#dadada; border-radius:1rem; padding-top:2rem; padding-bottom: 1rem; display:flex; flex-wrap:wrap; justify-content:center; gap:2.2rem;">
   <div style="display:flex; flex-direction:column; align-items:center; gap:0.5rem;">
-    <img src="/images/certs/osep.png" alt="OffSec - OffSec Experienced Penetration Tester (OSEP)" height="75"/>
+    <img src="/images/certs/OSEP.png" alt="OffSec - OffSec Experienced Penetration Tester (OSEP)" height="75"/>
     <span style="color:#212121; font-size:1.2rem; font-weight:600; text-align:center; line-height:1.4;">OSEP<br/><em style="font-weight:400;">in progress</em></span>
   </div>
   <div style="display:flex; flex-direction:column; align-items:center; gap:0.5rem;">
