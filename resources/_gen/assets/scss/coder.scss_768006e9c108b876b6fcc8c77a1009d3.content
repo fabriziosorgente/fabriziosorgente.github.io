@@ -10534,7 +10534,7 @@ strong {
 
 pre {
   display: block;
-  font-family: "SF Mono", Consolas, Liberation Mono, Menlo, monospace;
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 2.6rem;
@@ -10548,7 +10548,7 @@ pre {
     color: inherit; }
 
 code {
-  font-family: "SF Mono", Consolas, Liberation Mono, Menlo, monospace;
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
   font-size: 1.6rem;
   font-weight: 400;
   border-radius: 0.6rem;
@@ -10976,7 +10976,8 @@ figure {
     display: inline;
     text-align: center;
     font-weight: 700;
-    margin: 0 2px;
+    padding: 0 5px 0 5px;
+    margin: 0;
     text-align: center;
     width: 2.2rem; }
     .pagination li a {

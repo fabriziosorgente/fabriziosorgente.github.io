@@ -24,7 +24,7 @@ unsafe = true
 [params]
 favicon_32="/images/favicon-32.png"
 faviconSVG="/images/favicon-32.svg"
-author = "Fabrizio \"Nix\" Sorgente"
+author = "Fabrizio Sorgente"
 # license = '<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA-4.0</a>'
 description = ""
 keywords = "blog,security,cybersecurity,offensive,redteam,personal"
