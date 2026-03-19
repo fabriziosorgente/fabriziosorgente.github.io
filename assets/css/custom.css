@@ -10,6 +10,13 @@ body {
   margin-top: 0rem;
 }
 
+.avatar img {
+  height: 20rem;
+  width: 20rem;
+  object-fit: cover;
+  object-position: 50% 25%;
+}
+
 .content article p {
   -ms-hyphens: none;
   -webkit-hyphens: none;
